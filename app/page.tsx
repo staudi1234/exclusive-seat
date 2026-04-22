@@ -1,9 +1,7 @@
 "use client";
 
+import App from "../components/App";
+
 export default function Page() {
-  return (
-    <div style={{ padding: 20 }}>
-      <h1>Es funktioniert 🎉</h1>
-    </div>
-  );
+  return <App />;
 }
