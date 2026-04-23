@@ -1982,7 +1982,9 @@ function RestLayoutView({ rid }) {
   const walls  = ls.get("es3_walls",[]).filter(w=>w.rid===rid);
   const res    = ls.get("es3_reservations",[]);
   const locks  = getLocks();
-  const bookedIds = res.filter(r=>r.rid===rid&&r.date===today()&&r.status!=="cancelled").map(r=>r.tableId);
+  const bookedIds = res
+  .filter(r => r.rid === rid && r.date === today() && r.status !== "cancelled")
+  .map(r => r.tid);
   const lockedIds = Object.keys(locks);
   return (
     <div>
