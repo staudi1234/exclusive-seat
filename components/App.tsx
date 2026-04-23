@@ -1990,8 +1990,38 @@ function RestLayoutView({ rid }) {
     <div>
       <div className="sec-t">{t.todayMap}</div>
       <p style={{fontSize:10.5,color:"var(--tx3)",marginBottom:10}}>{t.readOnly}</p>
-      <CanvasView tables={tables} walls={walls} bookedIds={bookedIds} lockedIds={lockedIds} W={600} H={360} />
-      <div className="legend" style={{marginTop:8}}>
-        <span><span className="ld" style={{borderColor:"#333",color:"#333"}}/>{t.available}</span>
-        <span><span className="ld" style={{borderColor:"var(--er)",color:"var(--er)"}}/>{t.reserved}</span>
-        <span><span className="ld" style={{borderColor:"var(--wn)",color:"var(--w
+     <CanvasView
+  tables={tables}
+  walls={walls}
+  bookedIds={bookedIds}
+  lockedIds={lockedIds}
+  W={600}
+  H={360}
+/>
+      <div className="legend" style={{ marginTop: 8 }}>
+  <span>
+    <span
+      className="ld"
+      style={{ borderColor: "#333", color: "#333" }}
+    />
+    {t.available}
+  </span>
+
+  <span>
+    <span
+      className="ld"
+      style={{ borderColor: "var(--er)", color: "var(--er)" }}
+    />
+    {t.reserved}
+  </span>
+
+  <span>
+    <span
+      className="ld"
+      style={{ borderColor: "var(--wn)", color: "var(--wn)" }}
+    />
+    {t.blocked}
+  </span>
+</div>
+);
+}
