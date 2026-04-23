@@ -1,7 +1,8 @@
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="de">
-      <body>{children}</body>
-    </html>
+    <div style={{ padding: 20, fontFamily: "sans-serif" }}>
+      <h1>Exclusive Seat</h1>
+      {children}
+    </div>
   );
 }
