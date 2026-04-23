@@ -1983,6 +1983,7 @@ function RestLayoutView({ rid }) {
 const bookedIds = res.filter(
   (r) => r.rid === rid && r.date === today() && r.status !== "cancelled"
 ).map((r) => r.tid);
+  const locks = getLocks();
   const lockedIds = Object.keys(locks);
   return (
     <div>
